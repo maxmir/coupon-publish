@@ -1,4 +1,4 @@
-package com.dataplan.lgu;
+package com.dataplan.lgu.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
