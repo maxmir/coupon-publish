@@ -12,3 +12,7 @@ spring:
     username: root
     password: 1111
     driver-class-name: org.mariadb.jdbc.Driver
+
+  profiles:    active: local
+    
+logging:  config: classpath:logback-${spring.profiles.active}.xml
