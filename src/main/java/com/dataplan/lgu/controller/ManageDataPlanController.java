@@ -1,6 +1,5 @@
 package com.dataplan.lgu.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,17 +17,26 @@ import com.dataplan.lgu.DbService;
 @Controller
 public class ManageDataPlanController {
 
-	@Autowired
+    @Autowired
     DbService dbService;
 
+    /**
+     * 데이터 플랜 조회
+     *
+     * @param model
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @GetMapping(value = "/manageDataPlan")
-    public String manageDataPlan(Model model, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
-    	request.setCharacterEncoding("utf-8");
-    	List<HashMap<String, Object>> retHmList = new ArrayList<>();
-		retHmList = dbService.getManageDataPlanList();
-		System.out.println("retHmList---> " + retHmList);
-		response.setCharacterEncoding("utf-8");
-		model.addAttribute("manageDataPlanList", retHmList);
-    	return "manageDataPlan";
+    public String manageDataPlan(Model model, HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        request.setCharacterEncoding("utf-8");
+        List<HashMap<String, Object>> retHmList = new ArrayList<>();
+        retHmList = dbService.getManageDataPlanList();
+        response.setCharacterEncoding("utf-8");
+        model.addAttribute("manageDataPlanList", retHmList);
+        return "manageDataPlan";
     }
 }

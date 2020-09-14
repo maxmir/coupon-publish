@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface DbMapper {
-    public String getDual() throws Exception;
+    public List<HashMap<String, Object>> getManageDataPlanList() throws Exception;
 
-	public List<HashMap<String, Object>> getManageDataPlanList();
+    public int insertDataPlan(HashMap<String, Object> param) throws Exception;
+
+    public int deleteDataPlan(HashMap<String, Object> param) throws Exception;
 }

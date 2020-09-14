@@ -8,15 +8,19 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DbService {
-	@Autowired
+    @Autowired
     DbMapper dbMapper;
 
-    public String getDual() throws Exception{
-        return dbMapper.getDual();
+    public List<HashMap<String, Object>> getManageDataPlanList() throws Exception {
+        return dbMapper.getManageDataPlanList();
     }
 
-	public List<HashMap<String, Object>> getManageDataPlanList() {
-		return dbMapper.getManageDataPlanList();
-	}
+    public int insertDataPlan(HashMap<String, Object> param) throws Exception {
+        return dbMapper.insertDataPlan(param);
+    }
+
+    public int deleteDataPlan(HashMap<String, Object> param) throws Exception {
+        return dbMapper.deleteDataPlan(param);
+    }
 
 }

@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dataplan.lgu.DbMapper">
-    <select id="getDual" resultType="string">
-        SELECT NOW() FROM DUAL
-    </select>
-
 	<select id="getManageDataPlanList" resultType="hashmap">
-		SELECT
-		    *
-		FROM
-		    DEGCS_SVCCD
-		ORDER BY
-		    DEGCS_OAUTH_LASTUPDATE DESC
+	SELECT
+	    DEGCS_SVCCD
+		, DEGCS_SVCNM
+		, DEGCS_ENABLE_YN
+		, FROM_UNIXTIME(DEGCS_OAUTH_LASTUPDATE) as DEGCS_OAUTH_LASTUPDATE
+	FROM
+	    DEGCS_DATA_PLAN
+	ORDER BY
+	    DEGCS_OAUTH_LASTUPDATE DESC
 	</select>
+	
+	<insert id="insertDataPlan">
+	INSERT
+	    INTO
+	    DEGCS_DATA_PLAN (DEGCS_SVCCD, DEGCS_SVCNM, DEGCS_ENABLE_YN, DEGCS_OAUTH_LASTUPDATE, DEGCS_SVC_CREATEDATE)
+	VALUES(#{svcCd}, #{svcNm}, #{enableYn}, UNIX_TIMESTAMP(), NOW())
+	</insert>
 
+    <delete id="deleteDataPlan">
+    DELETE
+	FROM
+	    DEGCS_DATA_PLAN
+	WHERE
+	    DEGCS_SVCCD = #{svcCd}
+    </delete>
 </mapper>
