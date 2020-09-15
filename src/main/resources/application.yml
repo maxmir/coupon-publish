@@ -8,10 +8,15 @@ spring:
       suffix: .jsp
       
   datasource:
-    url: jdbc:mariadb://localhost:3306/test
-    username: root
-    password: 1111
-    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://localhost:3306/test
+#    username: root
+#    password: 1111
+#    driver-class-name: org.mariadb.jdbc.Driver
+
+    url: jdbc:mysql://172.17.28.79:3306/deg_app_ms?serverTimezone=UTC&characterEncoding=UTF-8
+    username: siu20
+    password: LGUplusium1!
+    driver-class-name: com.mysql.jdbc.Driver
 
   profiles:    active: local
     

@@ -9,7 +9,7 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
-        <file>manageDataPlanLog.txt</file>
+        <file>manageDataPlanLog.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
             <fileNamePattern>manageDataPlanLog-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
