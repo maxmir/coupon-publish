@@ -18,7 +18,7 @@
 			<td>${dataPlan.DEGCS_SVCCD }</td>
 			<td>${dataPlan.DEGCS_SVCNM }</td>
 			<td>${dataPlan.DEGCS_ENABLE_YN }</td>
-			<td>${dataPlan.DEGCS_OAUTH_LASTUPDATE }</td>
+			<td>${dataPlan.DEGCS_SVC_UPDATEDATE }</td>
 		</tr>
 	</c:forEach>
 	</table>

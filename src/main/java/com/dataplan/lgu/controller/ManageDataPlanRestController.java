@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,11 +35,44 @@ public class ManageDataPlanRestController {
         HashMap<String, Object> retHm = new HashMap<>();
         try {
             int resCnt = dbService.insertDataPlan(param);
-            retHm.put("insertCount", resCnt);
-            retHm.put("resMsg", "추가 데이터 플랜을 저장하였습니다.");
+            if (resCnt > 0) {
+                retHm.put("resMsg", "추가 데이터 플랜을 저장하였습니다.");
+            } else if (resCnt <= 0) {
+                retHm.put("resMsg", "저장된 데이터 플랜이 없습니다.");
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
             retHm.put("resMsg", "저장을 실패했습니다.");
+        }
+        return retHm;
+    }
+
+    /**
+     * 데이터 플랜 수정
+     *
+     * @param param
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+    @PutMapping(value = "modifyDataPlan")
+    public HashMap<String, Object> modifyDataPlan(@RequestParam HashMap<String, Object> param,
+            HttpServletRequest request, HttpServletResponse response) throws Exception {
+        HashMap<String, Object> retHm = new HashMap<>();
+        try {
+            int resCnt = dbService.modifyDataPlan(param);
+            retHm.put("modifyCount", resCnt);
+
+            if (resCnt > 0) {
+                retHm.put("resMsg", "데이터 플랜을 수정하였습니다.");
+            } else if (resCnt <= 0) {
+                retHm.put("resMsg", "수정된 데이터 플랜이 없습니다.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            retHm.put("resMsg", "수정을 실패했습니다.");
         }
         return retHm;
     }

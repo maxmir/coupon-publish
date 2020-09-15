@@ -19,6 +19,10 @@ public class DbService {
         return dbMapper.insertDataPlan(param);
     }
 
+    public int modifyDataPlan(HashMap<String, Object> param) throws Exception {
+        return dbMapper.modifyDataPlan(param);
+    }
+
     public int deleteDataPlan(HashMap<String, Object> param) throws Exception {
         return dbMapper.deleteDataPlan(param);
     }

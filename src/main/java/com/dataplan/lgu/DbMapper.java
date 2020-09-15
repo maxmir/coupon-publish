@@ -8,5 +8,7 @@ public interface DbMapper {
 
     public int insertDataPlan(HashMap<String, Object> param) throws Exception;
 
+    public int modifyDataPlan(HashMap<String, Object> param) throws Exception;
+
     public int deleteDataPlan(HashMap<String, Object> param) throws Exception;
 }
