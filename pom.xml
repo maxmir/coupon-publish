@@ -10,10 +10,10 @@
 	</parent>
 	<groupId>com.dataplan.lgu</groupId>
 	<artifactId>data-plan-manage</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>data-plan-manage</name>
 	<description>LGU+ Data Plan Manage project for Spring Boot</description>
-	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -56,6 +56,11 @@
 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
+		</dependency>
+
+		<dependency>
+		   <groupId>mysql</groupId>
+		   <artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
 		<dependency>

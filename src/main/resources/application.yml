@@ -13,10 +13,15 @@ spring:
 #    password: 1111
 #    driver-class-name: org.mariadb.jdbc.Driver
 
-    url: jdbc:mysql://172.17.28.79:3306/deg_app_ms?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://172.17.28.91:3306/deg_app_ms?serverTimezone=UTC&characterEncoding=UTF-8
     username: siu20
     password: LGUplusium1!
     driver-class-name: com.mysql.jdbc.Driver
+
+#    url: jdbc:mysql://192.168.0.151:32770/deg
+#    username: root
+#    password: aaronyeom
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 
   profiles:    active: local
     
