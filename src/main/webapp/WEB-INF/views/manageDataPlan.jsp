@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -222,7 +222,8 @@ $(document).on('click', '#saveDataPlan', function() {
         },
         error: function(e) {
             console.log(e.status, e.error);
-            alert(e);
+            alert('----- error-----\n' + e.status + '   ' + e.error);
+            $('#insertModifyModal').modal('hide');
         },
         complete : function() {
             $('#insertModifyDataPlanForm').each(function() {
