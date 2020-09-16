@@ -122,7 +122,7 @@
 <script src="<c:url value='/js/bootstrap.min.js'/>"></script>
 <script>
 
-// 화면 표시시 맨우 스크롤
+// 화면 표시시 맨위 스크롤
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
