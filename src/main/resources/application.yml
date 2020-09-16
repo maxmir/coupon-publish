@@ -22,7 +22,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     
     # APP-MySql_5.7.17
-#    url: jdbc:mysql://172.17.28.91:3306/deg_app_ms?useUnicode=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+#    url: jdbc:mysql://172.17.28.91:3306/deg_app_ms?useUnicode=true&characterEncoding=UTF-8
 #    username: siu20
 #    password: LGUplusium1!
 #    driver-class-name: com.mysql.cj.jdbc.Driver
