@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    # APP-MySql_5.7.17
+#    url: jdbc:mysql://172.17.28.91:3306/deg_app_ms
+    url: jdbc:mysql://172.17.28.91:3306/deg_app_ms?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=UTF-8
+    username: siu20
+    password: LGUplusium1!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+server:
+  port: 9090
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      
+logging:
+  config: classpath:logback-${spring.profiles.active}.xml      
