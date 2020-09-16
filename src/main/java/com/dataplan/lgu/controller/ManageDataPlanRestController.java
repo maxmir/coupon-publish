@@ -2,9 +2,6 @@ package com.dataplan.lgu.controller;
 
 import java.util.HashMap;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,14 +21,11 @@ public class ManageDataPlanRestController {
      * 데이터 플랜 입력(신규추가)
      *
      * @param param
-     * @param request
-     * @param response
      * @return
      * @throws Exception
      */
     @PostMapping(value = "insertDataPlan")
-    public HashMap<String, Object> insertDataPlan(@RequestParam HashMap<String, Object> param,
-            HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public HashMap<String, Object> insertDataPlan(@RequestParam HashMap<String, Object> param) throws Exception {
         HashMap<String, Object> retHm = new HashMap<>();
         try {
             int resCnt = dbService.insertDataPlan(param);
@@ -52,14 +46,11 @@ public class ManageDataPlanRestController {
      * 데이터 플랜 수정
      *
      * @param param
-     * @param request
-     * @param response
      * @return
      * @throws Exception
      */
     @PutMapping(value = "modifyDataPlan")
-    public HashMap<String, Object> modifyDataPlan(@RequestParam HashMap<String, Object> param,
-            HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public HashMap<String, Object> modifyDataPlan(@RequestParam HashMap<String, Object> param) throws Exception {
         HashMap<String, Object> retHm = new HashMap<>();
         try {
             int resCnt = dbService.modifyDataPlan(param);
@@ -81,14 +72,11 @@ public class ManageDataPlanRestController {
      * 데이터 플랜 삭제
      *
      * @param param
-     * @param request
-     * @param response
      * @return
      * @throws Exception
      */
     @DeleteMapping(value = "deleteDataPlan")
-    public HashMap<String, Object> deleteDataPlan(@RequestParam HashMap<String, Object> param,
-            HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public HashMap<String, Object> deleteDataPlan(@RequestParam HashMap<String, Object> param) throws Exception {
         HashMap<String, Object> retHm = new HashMap<>();
         try {
             int resCnt = dbService.deleteDataPlan(param);
