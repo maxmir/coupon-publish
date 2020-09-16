@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,7 @@ import com.dataplan.lgu.DbService;
 
 @Controller
 public class ManageDataPlanController {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     DbService dbService;
@@ -32,10 +35,11 @@ public class ManageDataPlanController {
     @GetMapping(value = "/manageDataPlan")
     public String manageDataPlan(Model model, HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        request.setCharacterEncoding("utf-8");
         List<HashMap<String, Object>> retHmList = new ArrayList<>();
         retHmList = dbService.getManageDataPlanList();
-        response.setCharacterEncoding("utf-8");
+        for (HashMap<String, Object> hashMap : retHmList) {
+            logger.debug(hashMap.toString());
+        }
         model.addAttribute("manageDataPlanList", retHmList);
         return "manageDataPlan";
     }
