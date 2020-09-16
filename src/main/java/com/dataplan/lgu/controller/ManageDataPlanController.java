@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +20,11 @@ public class ManageDataPlanController {
     @Autowired
     DbService dbService;
 
+    @GetMapping(value = "/")
+    public String index() throws Exception {
+        return "redirect:/manageDataPlan";
+    }
+
     /**
      * 데이터 플랜 조회
      *
@@ -33,8 +35,7 @@ public class ManageDataPlanController {
      * @throws Exception
      */
     @GetMapping(value = "/manageDataPlan")
-    public String manageDataPlan(Model model, HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
+    public String manageDataPlan(Model model) throws Exception {
         List<HashMap<String, Object>> retHmList = new ArrayList<>();
         retHmList = dbService.getManageDataPlanList();
         for (HashMap<String, Object> hashMap : retHmList) {
