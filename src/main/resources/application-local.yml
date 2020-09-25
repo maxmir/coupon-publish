@@ -10,16 +10,17 @@ spring:
   datasource:
     # local-Maria
 #    url: jdbc:mariadb://localhost:3306/test
-#    username: root
-#    password: 1111
-#    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:32771/test
+    username: root
+    password: 3333
+    driver-class-name: org.mariadb.jdbc.Driver
   
     # local-MySql_5.7
 #    url: jdbc:mysql://localhost:3307/test?useUnicode=true&serverTimezone=UTC&characterEncoding=UTF-8
-    url: jdbc:mysql://localhost:3307/test?useUnicode=yes&characterEncoding=UTF-8
-    username: root
-    password: 1111
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3307/test?useUnicode=yes&characterEncoding=UTF-8
+#    username: root
+#    password: 1111
+#    driver-class-name: com.mysql.cj.jdbc.Driver
     
     # aaronyeom Test
 #    url: jdbc:mysql://192.168.0.151:32770/deg

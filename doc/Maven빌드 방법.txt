@@ -1,8 +1,3 @@
-열편집 단축키
-Command name: Toggle Block Selection
-Alt + Shift + A
-
-
 === Maven Build 옵션 ===
 Run Configurations - Maven Build - data-plan-manage(프로젝트명)
 
