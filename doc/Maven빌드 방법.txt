@@ -1,0 +1,34 @@
+열편집 단축키
+Command name: Toggle Block Selection
+Alt + Shift + A
+
+
+=== Maven Build 옵션 ===
+Run Configurations - Maven Build - data-plan-manage(프로젝트명)
+
+* Main 탭
+Goals : package
+
+* JRE 탭
+VM arguments : -Dmaven.test.skip=true
+
+=== Spring Boot App ===
+data-plan-manage - DataPlanManageApplication
+
+* Arguments 탭
+VM arguments : -Dspring.profiles.active=local
+
+========================
+
+빌드 후 [project folder]/target/[build_fine_name].war
+
+로그파일은 war파일이 있는 곳
+
+빌드 파일 확장자 설정은 pom.xml <package>태그에서 설정, war or jar
+
+springboot 2 버전대부터 jar빌드파일의 jsp를 정식 지원하지 않음
+
+war 파일로 빌드 후 실행은 jar 명령어로
+
+java -jar [build_fine_name].war [options] -Dspring.profiles.active=dev -Dserver.port=9090 ....
+
