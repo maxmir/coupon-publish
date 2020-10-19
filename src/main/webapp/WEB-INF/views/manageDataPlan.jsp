@@ -61,8 +61,8 @@
                     </div>
                     <div class="modal-body">
                         <form id="insertModifyDataPlanForm" name="insertModifyDataPlanForm" method="post">
+                        <input type="hidden" id="isInsert" name="isInsert" />
                         <table class="table table-striped table-hover table-bordered">
-                            <input type="hidden" id="isInsert" name="isInsert" />
                             <tr>
                                 <td>서비스코드</td>
                                 <td><input readonly="readonly" type="text" class="form-control" id="svcCd" name="svcCd" /></td>
