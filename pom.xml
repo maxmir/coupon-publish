@@ -76,6 +76,7 @@
 		</dependency>
 
 		<!-- Servlet -->
+        <!--
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -88,6 +89,7 @@
 		    <version>2.3.3</version>
 		    <scope>provided</scope>
 		</dependency>
+		 -->
 
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 		<dependency>
