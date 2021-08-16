@@ -1,4 +1,4 @@
-package com.dataplan.lgu;
+package com.inzningko.manage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

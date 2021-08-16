@@ -1,4 +1,4 @@
-package com.dataplan.lgu;
+package com.inzningko.manage;
 
 import java.util.HashMap;
 import java.util.List;

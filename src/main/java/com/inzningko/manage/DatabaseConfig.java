@@ -1,4 +1,4 @@
-package com.dataplan.lgu;
+package com.inzningko.manage;
 
 import javax.sql.DataSource;
 
@@ -12,7 +12,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@MapperScan(basePackages = "com.dataplan.lgu")
+@MapperScan(basePackages = "com.inzningko.manage")
 @EnableTransactionManagement
 public class DatabaseConfig {
 
@@ -21,7 +21,7 @@ public class DatabaseConfig {
 		final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sessionFactory.setMapperLocations(resolver.getResources("classpath:com/dataplan/lgu/mapper/*.xml"));
+		sessionFactory.setMapperLocations(resolver.getResources("classpath:com/inzningko/manage/mapper/*.xml"));
 		return sessionFactory.getObject();
 	}
 

@@ -1,7 +1,12 @@
+server:
+  port: 9090
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
 spring:
-  profiles:
-    active: local
-  
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -9,10 +14,9 @@ spring:
       
   datasource:
     # local-Maria
-#    url: jdbc:mariadb://localhost:3306/test
-    url: jdbc:mariadb://localhost:32771/test
+    url: jdbc:mariadb://localhost:3306/myexer
     username: root
-    password: 3333
+    password: 3111
     driver-class-name: org.mariadb.jdbc.Driver
   
     # local-MySql_5.7
@@ -28,11 +32,5 @@ spring:
 #    password: aaronyeom
 #    driver-class-name: com.mysql.cj.jdbc.Driver
     
-server:
-  port: 9090
-  servlet:    encoding:      charset: UTF-8
-      enabled: true
-      force: true
-
 logging:
   config: classpath:logback-${spring.profiles.active}.xml           

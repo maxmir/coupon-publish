@@ -8,7 +8,7 @@
 		<version>2.3.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dataplan.lgu</groupId>
+	<groupId>com.inzningko.manage</groupId>
 	<artifactId>data-plan-manage</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>

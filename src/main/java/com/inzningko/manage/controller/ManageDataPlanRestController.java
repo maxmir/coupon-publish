@@ -1,4 +1,4 @@
-package com.dataplan.lgu.controller;
+package com.inzningko.manage.controller;
 
 import java.util.HashMap;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dataplan.lgu.DbService;
+import com.inzningko.manage.DbService;
 
 @RestController
 public class ManageDataPlanRestController {

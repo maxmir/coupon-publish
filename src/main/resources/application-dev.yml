@@ -1,7 +1,12 @@
+server:
+  port: 9090
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
 spring:
-  profiles:
-    active: dev
-  
   mvc:
     view:
       prefix: /WEB-INF/views/
@@ -15,13 +20,5 @@ spring:
     password: LGUplusium1!
     driver-class-name: com.mysql.cj.jdbc.Driver
     
-server:
-  port: 9090
-  servlet:
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
-      
 logging:
   config: classpath:logback-${spring.profiles.active}.xml      

@@ -1,4 +1,4 @@
-package com.dataplan.lgu.controller;
+package com.inzningko.manage.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.dataplan.lgu.DbService;
+import com.inzningko.manage.DbService;
 
 @Controller
 public class ManageDataPlanController {
