@@ -29,8 +29,6 @@ public class ManageDataPlanController {
      * 데이터 플랜 조회
      *
      * @param model
-     * @param request
-     * @param response
      * @return
      * @throws Exception
      */
