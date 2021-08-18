@@ -1,15 +1,10 @@
-package com.inzningko.manage.controller;
+package com.inzningko.manage.test.controller.rest;
+
+import com.inzningko.manage.test.service.DbService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.inzningko.manage.DbService;
 
 @RestController
 public class ManageDataPlanRestController {

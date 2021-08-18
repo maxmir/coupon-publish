@@ -1,4 +1,4 @@
-package com.inzningko.manage;
+package com.inzningko.manage.config;
 
 import javax.sql.DataSource;
 

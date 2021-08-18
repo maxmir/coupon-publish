@@ -1,15 +1,16 @@
-package com.inzningko.manage;
+package com.inzningko.manage.test.service;
+
+import com.inzningko.manage.test.mapper.DbMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 @Service
 public class DbService {
     @Autowired
-    DbMapper dbMapper;
+    private DbMapper dbMapper;
 
     public List<HashMap<String, Object>> getManageDataPlanList() throws Exception {
         return dbMapper.getManageDataPlanList();
