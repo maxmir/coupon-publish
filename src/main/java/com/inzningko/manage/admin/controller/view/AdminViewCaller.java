@@ -10,12 +10,12 @@ public class AdminViewCaller {
 
     @GetMapping("login")
     public String adminLogin() {
-        return "adminLogin";
+        return "admin/adminLogin";
     }
 
     @GetMapping("menu")
     public String adminMenu() {
-        return "/admin/adminMenu";
+        return "admin/adminMenu";
     }
 
 }

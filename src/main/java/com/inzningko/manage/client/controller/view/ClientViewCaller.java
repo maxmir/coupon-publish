@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ClientViewCaller {
     @GetMapping("login")
     public String clientLogin() {
-        return "clientLogin";
+        return "client/clientLogin";
     }
 
     @GetMapping("menu")
     public String clientMenu() {
-        return "clientMenu";
+        return "client/clientMenu";
     }
 
 }
