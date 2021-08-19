@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">관리자 메뉴</h2>
+                <h2 class="heading-section">Administrator Space</h2>
             </div>
         </div>
     </div>
@@ -35,8 +35,7 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col">
-<%--                <a class="navbar-brand" href="index.html">Papermag <span>Magazine</span></a>--%>
-                <a class="navbar-brand" href="index.html">한소희 <span>관리자</span></a>
+                <a class="navbar-brand" href="index.html">한소희 <span>Administrator</span></a>
             </div>
             <div class="col d-flex justify-content-end">
                 <div class="social-media">
@@ -66,12 +65,13 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">쿠폰 등록</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">등록 쿠폰 내역</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">등록 쿠폰 현황</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">관리자 정보</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="#">정보 확인</a>
-                            <a class="dropdown-item" href="#">로그아웃</a>
+                            <a class="dropdown-item" href="#">My Info</a>
+                            <a class="dropdown-item" href="#">전체 관리자 현황</a>
+                            <a class="dropdown-item" href="#">관리자 추가</a>
                         </div>
                     </li>
                 </ul>
