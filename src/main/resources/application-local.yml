@@ -14,9 +14,15 @@ spring:
       
   datasource:
     # local-Maria
-    url: jdbc:mariadb://localhost:3306/myexer
+#    url: jdbc:mariadb://localhost:3306/myexer
+#    username: root
+#    password: 3111
+#    driver-class-name: org.mariadb.jdbc.Driver
+
+    # GCP-Maria(GoogleCloud)
+    url: jdbc:mariadb://34.64.143.51:3306/myexer
     username: root
-    password: 3111
+    password: 1111
     driver-class-name: org.mariadb.jdbc.Driver
   
     # local-MySql_5.7
@@ -25,12 +31,11 @@ spring:
 #    username: root
 #    password: 1111
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-    
-    # aaronyeom Test
-#    url: jdbc:mysql://192.168.0.151:32770/deg
-#    username: root
-#    password: aaronyeom
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-    
+
+mybatis:
+#  config-location: classpath:mybatis-config.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
 logging:
   config: classpath:logback-${spring.profiles.active}.xml           
