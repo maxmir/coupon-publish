@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inzningko.manage.client.mapper.ClientMapper">
+    <insert id="insertMyCoupon">
+    insert into
+    publish_coupon (
+        user_seq,
+        coupon_seq,
+        quantity,
+        register_id
+    )
+    values(
+        1,
+        #{couponSeq},
+        #{reqPublishCnt},
+        'test'
+    )
+
+    </insert>
+
+    <update id="publishCoupon">
+    update
+        coupon
+    set
+        publish_cnt = publish_cnt + #{reqPublishCnt},
+        remain_cnt = remain_cnt - #{reqPublishCnt}
+    where
+        seq = #{couponSeq}
+    </update>
+
+
+    <select id="clientLoginProcess" resultType="int">
+    select
+        count(*)
+    from
+        user
+    where
+        id = #{userid}
+      and password = #{password}
+    </select>
+
+    <select id="couponList" resultType="java.util.HashMap">
+    select
+        *
+    from
+        coupon
+    where
+        use_yn = 'y'
+    </select>
+
+    <select id="myCoupons" resultType="java.util.HashMap">
+    select
+        pc.seq, name, description, pc.regist_dt , quantity , c.available_start_dt , c.available_end_dt
+    from
+        publish_coupon pc
+    inner join coupon c
+    on
+        pc.coupon_seq = c.seq
+    where
+        user_seq = 1
+    </select>
+</mapper>

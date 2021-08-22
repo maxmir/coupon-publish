@@ -28,8 +28,8 @@
 
     <title>Coupon Publish</title>
 </head>
-<body>
-
+<body class="hero" style="background-image: url('/images/hero_1.jpg'); background-repeat: no-repeat; background-position: center center;">
+<%--<div class="hero" style="background-image: url('/images/hero_1.jpg');"></div>--%>
 
 <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
@@ -49,26 +49,26 @@
 
             <nav class="mx-auto site-navigation">
                 <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html">My Coupons</a></li>
-                    <li><a href="services.html">Get Coupons</a></li>
-                    <li><a href="about.html">Member</a></li>
+                    <li><a href="" class="nav-link active">Home</a></li>
+                    <li><a href="/client/myCoupons">My-Coupons</a></li>
+                    <li><a href="/client/couponList">Coupon-List</a></li>
+                    <li><a href="">Member</a></li>
                     <li class="has-children">
-                        <a href="job-listings.html">Introduce</a>
+                        <a href="">Introduce</a>
                         <ul class="dropdown">
-                            <li><a href="post-job.html">Blog</a></li>
-                            <li><a href="job-single.html">Contact</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Email</a></li>
-                    <li class="d-lg-none"><a href="login.html">Log In</a></li>
+                    <li class="d-lg-none"><a href=""><span class="mr-2">+</span> Post a Email</a></li>
+                    <li class="d-lg-none"><a href="">Log In</a></li>
                 </ul>
             </nav>
 
             <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
                 <div class="ml-auto">
-                    <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
-                    <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+                    <a href="" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
+                    <a href="/client/login" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
                 </div>
                 <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
             </div>
@@ -77,13 +77,21 @@
     </div>
 </header>
 
+<%--<div class="hero" style="background-image: url('/images/hero_1.jpg');"></div>--%>
 
-<div class="hero" style="background-image: url('/images/hero_1.jpg');"></div>
+<div style="padding-top: 5em;">
+    <c:if test="${coupons.size() > 0}">
+        <jsp:include page="couponList.jsp"/>
+    </c:if>
+    <c:if test="${myCoupons.size() > 0}">
+        <jsp:include page="myCoupons.jsp"/>
+    </c:if>
+</div>
 
 <script src="<c:url value='/js/jquery-3.5.1.min.js'/>"></script>
 <script src="<c:url value='/js/popper.min.js'/>"></script>
 <script src="<c:url value='/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/js/jquery.sticky.js'/>"></script>
-<script src="<c:url value='/js/client/clientMenuMain.js'/>"></script>
+<script src="<c:url value='/js/client/clientMenu.js'/>"></script>
 </body>
 </html>

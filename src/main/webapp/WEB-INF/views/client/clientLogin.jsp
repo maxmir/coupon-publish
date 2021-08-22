@@ -49,16 +49,16 @@
             </div>
             <form action="#" class="signin-form">
               <div class="form-group mt-3">
-                <input type="text" class="form-control" required>
-                <label class="form-control-placeholder" for="username">Username</label>
+                <input type="text" id="userid" class="form-control" required>
+                <label class="form-control-placeholder" for="userid">UserId</label>
               </div>
               <div class="form-group">
-                <input id="password-field" type="password" class="form-control" required>
+                <input id="password" type="password" id="password" class="form-control" required>
                 <label class="form-control-placeholder" for="password">Password</label>
                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
               <div class="form-group">
-                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                <button type="submit" id="login" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
               </div>
               <div class="form-group d-md-flex">
                 <div class="w-50 text-left">
@@ -84,7 +84,7 @@
 <script src="<c:url value='/js/popper.min.js'/>"></script>
 <script src="<c:url value='/js/bootstrap.min.js'/>"></script>
 <script src="<c:url value='/js/jquery.sticky.js'/>"></script>
-<script src="<c:url value='/js/client/clientLoginMain.js'/>"></script>
+<script src="<c:url value='/js/client/clientLogin.js'/>"></script>
 
 </body>
 </html>
