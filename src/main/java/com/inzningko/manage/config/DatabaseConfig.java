@@ -1,7 +1,5 @@
 package com.inzningko.manage.config;
 
-import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -11,8 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.sql.DataSource;
+
 @Configuration
-@MapperScan(basePackages = "com.inzningko.manage")
+@MapperScan(basePackages = "com.inzningko.manage.**.mapper")
 @EnableTransactionManagement
 public class DatabaseConfig {
 
@@ -21,7 +21,7 @@ public class DatabaseConfig {
 		final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sessionFactory.setMapperLocations(resolver.getResources("classpath:com/inzningko/manage/mapper/*.xml"));
+		sessionFactory.setMapperLocations(resolver.getResources("classpath:com/inzningko/manage/mapper/**/*.xml"));
 		return sessionFactory.getObject();
 	}
 
