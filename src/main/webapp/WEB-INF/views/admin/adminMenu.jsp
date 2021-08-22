@@ -14,7 +14,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Website menu 02</title>
+    <title>Coupon Publish Administrator Space</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -63,9 +63,9 @@
             </form>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="/admin/menu" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">쿠폰 등록</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">등록 쿠폰 현황</a></li>
+                    <li class="nav-item"><a href="/admin/couponList" class="nav-link">등록 쿠폰 현황</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">관리자 정보</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -81,6 +81,12 @@
     <!-- END nav -->
 
 </section>
+
+<%--<div style="padding-top: 5em;">--%>
+    <c:if test="${adminCoupons.size() > 0}">
+        <jsp:include page="adminCouponList.jsp"/>
+    </c:if>
+<%--</div>--%>
 
 <script src="<c:url value='/js/jquery-3.5.1.min.js'/>"></script>
 <script src="<c:url value='/js/popper.min.js'/>"></script>
