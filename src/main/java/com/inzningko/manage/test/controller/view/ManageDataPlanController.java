@@ -21,7 +21,7 @@ public class ManageDataPlanController {
 
     @GetMapping(value = "/")
     public String index() throws Exception {
-        return "redirect:/manageDataPlan";
+        return "redirect:/client/login";
     }
 
     /**
@@ -31,7 +31,7 @@ public class ManageDataPlanController {
      * @return
      * @throws Exception
      */
-    @GetMapping(value = "/manageDataPlan")
+    @GetMapping(value = "/testView")
     public String manageDataPlan(Model model) throws Exception {
         List<HashMap<String, Object>> retHmList = new ArrayList<>();
         retHmList = dbService.getManageDataPlanList();
