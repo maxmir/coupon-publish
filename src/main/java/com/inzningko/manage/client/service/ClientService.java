@@ -74,9 +74,13 @@ public class ClientService {
         String msg = "";
         try {
             int resultCnt = clientMapper.publishCoupon(params);
-            resultCnt = clientMapper.insertMyCoupon(params);
+            int reqPublishCnt = Integer.valueOf(String.valueOf(params.get("reqPublishCnt")));
+            for (int i = 0; i < reqPublishCnt; i++) {
+                resultCnt = clientMapper.insertMyCoupon(params);
+            }
             if (resultCnt == 1) {
                 msg = "publish success";
+                retMap.put("resultList", clientMapper.myCoupons());
                 retMap.put("result", true);
             }
             else {

@@ -6,13 +6,11 @@
     publish_coupon (
         user_seq,
         coupon_seq,
-        quantity,
         register_id
     )
     values(
         1,
         #{couponSeq},
-        #{reqPublishCnt},
         'test'
     )
 

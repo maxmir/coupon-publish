@@ -1,12 +1,13 @@
 package com.inzningko.manage;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication(scanBasePackages = "com.inzningko.manage")
-//@MapperScan(basePackages = "com.inzningko.manage.**.mapper")
+@MapperScan(basePackages = "com.inzningko.manage.**.mapper")
 //public class CouponPublishApplication {
 //    public static void main(String[] args) {
 //        SpringApplication.run(CouponPublishApplication.class, args);
