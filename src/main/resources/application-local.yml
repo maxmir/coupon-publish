@@ -22,7 +22,7 @@ spring:
     # GCP-Maria(GoogleCloud)
     url: jdbc:mariadb://34.64.143.51:3306/myexer
     username: root
-    password: 1111
+    password: 3111
     driver-class-name: org.mariadb.jdbc.Driver
   
     # local-MySql_5.7
