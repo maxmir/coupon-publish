@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.inzningko.manage</groupId>
 	<artifactId>coupon-publish</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>coupon-publish</name>
 	<description>Coupon Publish project for Spring Boot</description>
