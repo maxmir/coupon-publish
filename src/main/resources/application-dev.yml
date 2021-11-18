@@ -18,6 +18,10 @@ spring:
     username: root
     password: 3111
     driver-class-name: org.mariadb.jdbc.Driver
-    
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
 logging:
   config: classpath:logback-${spring.profiles.active}.xml      
