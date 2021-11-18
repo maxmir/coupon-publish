@@ -14,7 +14,7 @@ spring:
       
   datasource:
     # GCP-Maria(GoogleCloud)
-    url: jdbc:mariadb://34.64.143.51:3306/myexer
+    url: jdbc:mariadb://10.178.0.2:3306/myexer
     username: root
     password: 3111
     driver-class-name: org.mariadb.jdbc.Driver
